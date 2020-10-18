@@ -1,23 +1,30 @@
-# PACKAGE NAME [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=DESCRIPTION&url=https://github.com/CharlesStover/PACKAGE-NAME&via=CharlesStover&hashtags=react,reactjs,javascript,typescript,webdev,webdevelopment) [![version](https://img.shields.io/npm/v/PACKAGE-NAME.svg)](https://www.npmjs.com/package/PACKAGE-NAME) [![minzipped size](https://img.shields.io/bundlephobia/minzip/PACKAGE-NAME.svg)](https://www.npmjs.com/package/PACKAGE-NAME) [![downloads](https://img.shields.io/npm/dt/PACKAGE-NAME.svg)](https://www.npmjs.com/package/PACKAGE-NAME) [![build](https://api.travis-ci.com/CharlesStover/PACKAGE-NAME.svg)](https://travis-ci.com/CharlesStover/PACKAGE-NAME/)
+# usePageVisibility [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Listen%20for%20page%20transition%20events%20with%20a%20React%20hook.&url=https://github.com/CharlesStover/use-page-visibility&via=CharlesStover&hashtags=react,reactjs,javascript,typescript,webdev,webdevelopment) [![version](https://img.shields.io/npm/v/use-page-visibility.svg)](https://www.npmjs.com/package/use-page-visibility) [![minzipped size](https://img.shields.io/bundlephobia/minzip/use-page-visibility.svg)](https://www.npmjs.com/package/use-page-visibility) [![downloads](https://img.shields.io/npm/dt/use-page-visibility.svg)](https://www.npmjs.com/package/use-page-visibility) [![build](https://api.travis-ci.com/CharlesStover/use-page-visibility.svg)](https://travis-ci.com/CharlesStover/use-page-visibility/)
 
-DESCRIPTION
+Listen for page transition (visibility and persistence) events with a React
+hook.
 
-* [Install](#install)
-* [Use](#use)
-* [API](#api)
-* [Sponsor](#sponsor)
+- [Install](#install)
+- [Use](#use)
+- [Sponsor](#sponsor)
 
 ## Install
 
-INSTRUCTIONS
+- `npm install use-page-visibility` or
+- `yarn add use-page-visibility`
 
 ## Use
 
-INSTRUCTIONS
-
-## API
-
-API
+```javascript
+function App() {
+  const [isVisible, isPersistent] = usePageVisibility();
+  return (
+    <p>
+      The page is {isVisible ? 'visible' : 'hidden'}
+      {isPersistent ? ' and persisted' : ''}.
+    </p>
+  );
+}
+```
 
 ## Sponsor 💗
 
