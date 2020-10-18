@@ -1,9 +1,9 @@
 import { act, renderHook } from '@testing-library/react-hooks';
-import usePageVisibility from '.';
+import usePageTransition from '.';
 
-describe('usePageVisibility', (): void => {
+describe('usePageTransition', (): void => {
   it('should default to impersistently visible', (): void => {
-    const { result } = renderHook(usePageVisibility);
+    const { result } = renderHook(usePageTransition);
     const [isVisible, isPersistent] = result.current;
     expect(isVisible).toBe(true);
     expect(isPersistent).toBe(false);
@@ -23,7 +23,7 @@ describe('usePageVisibility', (): void => {
       expect.any(Function),
     );
 
-    renderHook(usePageVisibility);
+    renderHook(usePageTransition);
 
     expect(windowAddEventListener).toHaveBeenCalledWith(
       'pagehide',
@@ -36,7 +36,7 @@ describe('usePageVisibility', (): void => {
   });
 
   it('should respond to persistent pageshow events', (): void => {
-    const { result } = renderHook(usePageVisibility);
+    const { result } = renderHook(usePageTransition);
 
     act((): void => {
       const e: PageTransitionEvent = new PageTransitionEvent('pageshow', {
@@ -51,7 +51,7 @@ describe('usePageVisibility', (): void => {
   });
 
   it('should respond to impersistent pageshow events', (): void => {
-    const { result } = renderHook(usePageVisibility);
+    const { result } = renderHook(usePageTransition);
 
     act((): void => {
       const e: PageTransitionEvent = new PageTransitionEvent('pageshow', {
@@ -66,7 +66,7 @@ describe('usePageVisibility', (): void => {
   });
 
   it('should respond to persistent pagehide events', (): void => {
-    const { result } = renderHook(usePageVisibility);
+    const { result } = renderHook(usePageTransition);
 
     act((): void => {
       const e: PageTransitionEvent = new PageTransitionEvent('pagehide', {
@@ -81,7 +81,7 @@ describe('usePageVisibility', (): void => {
   });
 
   it('should respond to impersistent pagehide events', (): void => {
-    const { result } = renderHook(usePageVisibility);
+    const { result } = renderHook(usePageTransition);
 
     act((): void => {
       const e: PageTransitionEvent = new PageTransitionEvent('pagehide', {
@@ -109,7 +109,7 @@ describe('usePageVisibility', (): void => {
       expect.any(Function),
     );
 
-    const { unmount } = renderHook(usePageVisibility);
+    const { unmount } = renderHook(usePageTransition);
     unmount();
 
     expect(windowRemoveEventListener).toHaveBeenCalledWith(

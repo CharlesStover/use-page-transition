@@ -1,18 +1,18 @@
 {
-  "name": "use-page-visibility",
+  "name": "use-page-transition",
   "version": "1.0.0",
-  "author": "Charles Stover <use-page-visibility@charlesstover.com>",
+  "author": "Charles Stover <use-page-transition@charlesstover.com>",
   "description": "React hook for listening to page transition events",
-  "homepage": "https://www.npmjs.com/package/use-page-visibility",
+  "homepage": "https://www.npmjs.com/package/use-page-transition",
   "license": "MIT",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",
-  "repository": "https://github.com/CharlesStover/use-page-visibility",
+  "repository": "https://github.com/CharlesStover/use-page-transition",
   "type": "module",
   "types": "./types/index.d.ts",
   "bugs": {
-    "email": "use-page-visibility@charlesstover.com",
-    "url": "https://github.com/CharlesStover/use-page-visibility/issues"
+    "email": "use-page-transition@charlesstover.com",
+    "url": "https://github.com/CharlesStover/use-page-transition/issues"
   },
   "directories": {
     "lib": "src"

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export default function usePageVisibility(): [boolean, boolean] {
+export default function usePageTransition(): [boolean, boolean] {
   // TODO: default value
   const [visibility, setVisibility] = useState<[boolean, boolean]>([
     true,
